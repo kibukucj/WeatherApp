@@ -46,7 +46,7 @@ It has:
 fetch(`http://127.0.0.1:8000/api/weather?city=${city}&unit=${unit}`)
 ```
 
-→ This hits your Laravel backend API.
+→ This hits the Laravel backend API.
 
 ---
 
