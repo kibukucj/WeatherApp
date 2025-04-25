@@ -6,7 +6,7 @@ type WeatherData = {
   weather: { description: string; icon: string }[];
   main: { temp: number; humidity: number };
   wind: { speed: number };
-  forecast?: { dt: number; temp: { day: number }; weather: { icon: string }[] }[];
+  forecast?: { dt: number; temp: number; weather: { icon: string }[] }[];
 };
 
 function getCurrentDate(): string {
@@ -118,16 +118,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex gap-6">
-                <div className="flex gap-4"></div>
-                <div className="flex gap-4 text-center font-semibold pt-4"> Forecast For The Next 3 Day</div>
+              <div className="text-center font-semibold pt-4">
+                Forecast For The Next 3 Days
               </div>
-
 
               {/* Forecast Cards */}
               {weatherData.forecast && (
                 <div className="grid grid-cols-3 gap-4">
-                  {weatherData.forecast.slice(0, 4).map((day, index) => (
+                  {weatherData.forecast.slice(0, 3).map((day, index) => (
                     <div
                       key={index}
                       className="flex flex-col items-center bg-white/10 p-4 rounded-xl text-white backdrop-blur-sm"
@@ -142,7 +140,11 @@ export default function Home() {
                         alt="forecast icon"
                         className="w-10"
                       />
-                      <p className="text-sm">{Math.round(day.temp.day)}°</p>
+                      <p className="text-sm">
+                        {typeof day.temp === "number"
+                          ? `${Math.round(day.temp)}°`
+                          : "N/A"}
+                      </p>
                     </div>
                   ))}
                 </div>
