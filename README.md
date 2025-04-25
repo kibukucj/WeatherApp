@@ -22,7 +22,7 @@ weather-backend/    # Laravel 12 API backend
 
 ## 🧠 High-Level Overview
 
-You're building a full-stack weather application where:
+We're building a full-stack weather application where:
 
 - The **frontend** (`Next.js` + `RippleUI` + `TailwindCSS`) displays a UI to enter a city, toggle temperature units, and show current + forecast weather.
 - The **backend** (`Laravel`) serves as an API layer, fetching and formatting weather data using the OpenWeather API.
@@ -74,13 +74,13 @@ It registers:
 Route::get('/api/weather', [WeatherController::class, 'getWeather']);
 ```
 
-→ This is the exact endpoint your frontend is calling.
+→ This is the exact endpoint our frontend is calling.
 
 ---
 
 ### 🔹 4. `layout.tsx` (Next.js)
 
-**Role:** Defines the HTML wrapper layout for all pages in your app.
+**Role:** Defines the HTML wrapper layout for all pages in our app.
 
 - Imports RippleUI via CDN
 - Sets global fonts (Geist)
