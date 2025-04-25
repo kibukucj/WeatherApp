@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+    <link href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/styles.css" rel="stylesheet" />
+  </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
