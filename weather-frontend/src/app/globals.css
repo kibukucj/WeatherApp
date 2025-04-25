@@ -1,9 +1,17 @@
+/* Import Tailwind's base styles (includes Normalize.css and base resets) */
 @tailwind base;
+
+/* Import Tailwind component classes (e.g., buttons, forms, etc.) */
 @tailwind components;
+
+/* Import Tailwind utility classes (margin, padding, grid, etc.) */
 @tailwind utilities;
 
+/* Global body styles */
 body {
-    font-family: 'Geist', sans-serif;
-    background-color: #0F172A;
-  }
-  
+  /* Set the primary font family to Geist, fallback to sans-serif */
+  font-family: 'Geist', sans-serif;
+
+  /* Set a deep blue background as the default page color */
+  background-color: #0F172A;
+}
